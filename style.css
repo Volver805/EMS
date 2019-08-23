@@ -1,0 +1,688 @@
+html,body,h1 {
+    margin:0;
+    padding:0;
+    font-family: 'Open Sans';    
+}
+html {
+    height: 100%;
+    overflow-x:hidden;
+}
+
+input:focus {
+    outline: none;
+}
+button:focus {
+    outline:none;
+}
+textarea {
+    resize: none;
+    height:60%;
+    width:80%;
+    margin-left:10%;
+}
+
+/*####  Header   ####*/
+
+#logo { 
+    position: absolute;
+    border:4px solid white;
+    padding:3px;
+    top:30px;
+    left:30px;
+}
+#logo p
+{   margin:0px;
+    font-family: 'open sans';
+    color:white;
+    font-weight:1000;
+    font-size:150%;
+}
+
+/*####  Footer   ####*/
+
+#footer {
+    position: absolute;
+    bottom:0;
+    left:30px;
+}
+#footer p {
+    color:white;
+}
+#footer a {
+    text-decoration: none;
+    color:#007bff;
+}
+
+/*####  Login Form   ####*/
+
+.teacher-bg-image {   
+    height:100%;
+    width:100%;
+    background-image: url('assets/Teacher.jpg');
+    background-repeat: no-repeat no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    z-index: -1;
+    float:left;
+}
+.student-bg-image {   
+    display: none;
+    height:100%;
+    width:100%;
+    background-image: url('assets/student.jpg');
+    background-repeat: no-repeat no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    z-index: -1;
+    float:left;
+}
+
+.dark-overlay {
+    margin-top:0px;
+    padding-top:0px;
+    background-color: black;
+    height:100%;
+    width:100%;
+    opacity:0.5;
+    position: absolute;
+    z-index: -1;
+}
+.header   {
+    padding:0px;
+    margin:0px;
+    z-index: 10;
+    position: relative;
+    padding-top:120px;
+    height:60%;
+    text-align: center;
+    color:white;
+    margin-bottom:40px;
+}
+.header h1 {
+    font-size:300%;   
+}
+.header p {
+    font-size:110%;
+    text-align:center;
+    margin-bottom:0px;
+}
+.login-form {
+    background-color:white;
+    height:100px;
+    border-radius:5px;
+    width:400px;
+    margin:0 auto;
+    overflow:hidden;
+}
+.login-form-input {
+    height:50%;
+}
+.login-form input {
+    display: inline;
+    float:left;
+    padding:0 5%;
+    border:0px;
+    width:39.8%;
+    height:100%;
+}
+.login-form button {
+    height:50%;
+    margin:0px;
+    width:100%;
+    border:0px;
+    color:white;
+    font-size:95%;
+    background-color:#00669b;
+    cursor:pointer;
+
+}
+#switch-buttons {
+    width:400px;
+    margin:0 auto;
+    height:40px;
+    overflow: hidden;
+}
+#teacher-student {
+    height:100%;
+    border-radius:5px;
+    width:100%;
+    text-align:center;
+    border:0px;
+    color:white;
+    font-size:95%;
+    background-color:#0478b4;
+    cursor:pointer;
+}
+#student-teacher {
+    display:block;
+    height:100%;
+    border-radius:5px;
+    width:400px;
+    margin:0 auto;
+    text-align:center;
+    border:0px;
+    color:white;
+    font-size:95%;
+    background-color:#0478b4;
+    cursor:pointer;
+    display:none;
+}
+#errors{
+    text-align: center;
+    color:#e71b24;
+    height:20px;
+}
+#login-view {
+    position:relative;
+}
+.portal {
+    height:620px;
+    width:80%;
+    position: relative;
+    top:80px;
+    left:100%;
+    border-radius:15px;
+    background:#F5F5F5;
+    color:#1b1b1b;
+    font-size:80%;
+    overflow:hidden;
+}
+#prof {
+    color:gray;
+    font-size:70%;
+    margin-left:10px;
+}
+.welcome img {
+    z-index:-1;
+    margin-right:50px;
+    height:60px;
+    display:inline-block;
+}
+.welcome {
+    position: relative;
+    top: 40px;
+    left:80px;
+}
+.welcome h1{
+    line-height: 50px;
+    display:inline-block;
+}
+.options-section {
+    position: absolute;
+    bottom:0;
+    height:70%;
+    width:100%; 
+    background-color:#0061E0;
+}
+.options-section button {
+    cursor: pointer;
+    width:20%;
+    height:300px;
+    border:3px solid white;
+    border-radius:5px;
+    margin-left:18%;
+    margin-top:5%;
+    color:white;
+    font-family:'open sans';
+    font-size:150%; 
+    background-color:#0061E0;
+    font-weight:500;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+    .options-image {
+    width:60px;
+}
+
+.first-line {
+    font-size:70%;
+    
+}
+.create-section {
+    font-family:'open sans';
+    position: relative;
+    top: 60px;
+    left:120px;
+    display:none;
+}
+.create-section h1{
+    margin:0px;
+    font-weight:500;
+    font-size:330%;
+    margin-bottom:40px;
+    margin-top:0px;
+}
+.create-form label {
+    font-weight:600;
+    display:block;
+    margin-bottom:10px;
+    font-size:200%;
+}
+.create-form input {
+    display:block;
+    padding-left:20px;
+    width:330px;
+    height:40px;
+    border:1px solid #999999;
+    margin-bottom:30px;
+}
+#create-button {
+    margin-top:40px;
+    color:white;
+    font-size:180%;
+    font-weight:500;
+    border:0px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    background-color:#0061E0;
+    cursor: pointer;
+    width:350px;
+}
+.create-errors {
+    color:red;
+}
+.logout {
+    border:3px solid #d7423c;
+    background-color:#f5f5f5;
+    cursor:pointer;
+    position:relative;
+    color:#d7423c;
+    font-weight:600;
+    border-radius:10px;
+    top:40px;
+    right:60px;
+    font-size:120%;
+    width:100px;
+    height:60px;
+    text-align: center;
+    float:right;
+    z-index:999;
+}
+.card {
+    padding-top:10px;
+    display:inline-block;
+    color:white;
+    background:#999999;
+    height:200px;
+    text-align: center;
+    font-size:120%;
+    font-weight:600;
+    width:250px;
+    border-radius:34px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    position:relative;
+    margin-left:-25px;
+    cursor:pointer;
+}
+.card-active {
+    background:#0061E0;
+}
+.cards-div {
+    position: relative;
+    float:left;
+    left:15%;
+    top:1000px;
+}
+.course-details {
+    color:white;
+    padding-left:15%;
+    position: absolute;
+    bottom:0;
+    background-color:#0061E0;
+    height:0;
+    width:100%;
+    z-index:10;
+}
+.course-details h1 {
+    margin-top:4%;
+    font-weight:450;
+    font-size:300%;
+}
+.course-details p {
+    font-size:130%;
+    color:#dbdbdb;
+}
+.assignments {
+    border:1px solid white;
+    height:250px;
+    overflow:auto;
+    width:60%;
+}
+.course-details table {
+    border:3px white solid;
+    border-collapse: collapse;
+    width:100%;
+    font-size:120%;
+    margin:0px;
+    padding:0px;
+}
+.course-details th {
+    border-right:3px solid white;
+    height:50px;
+}
+.course-details tr {
+    border-bottom:#707070;  
+}
+.course-details td {
+    width:25%;
+    height:50px;
+    background-color:white;
+    color:black;
+    border:0px;
+    padding:0px;
+    margin:0px;
+    text-align: center;
+    margin-top:40px;
+
+}
+.course-details input{
+    height:30px;
+    margin-top:20px;
+    width:12%;
+}
+.view-answers {
+    cursor: pointer;
+    color:#0061E0;
+}
+#answers-table {
+    border:3px solid #00669b;
+    background-color:white;
+    height:600px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    padding-top:60px;
+    width: 800px;
+    position: absolute;
+    z-index:1000;
+    top:2%;
+    left:100%;
+    color:black;
+    font-size:140%;
+}
+#close-button {
+    position: absolute;
+    right:40px;
+    top:20px;
+    color:#00669b;
+    font-size:140%;
+    font-weight:500;
+    cursor:pointer;
+    background-color:transparent;
+    border:0;
+}
+#answers-table h2{
+    margin-left:120px;
+    font-weight:500;
+}
+#question {
+    background-color:#e6ecf0;
+    padding-bottom:50px;
+    display:block;
+}
+#question p {
+    margin:0 120px;
+}
+.answer-row{
+    padding:0px;
+    width:80%;
+    margin:0 auto;
+    border-bottom:1px solid gray;
+    display:block;
+    padding-left:120px;
+    overflow:hidden;
+}
+.answer-row p {
+    display:inline-block; 
+    margin-right:1px;
+    width:30%;
+    margin-right:15%;
+}
+.student-answer {
+    height:0px;
+}
+.grade-input {
+    display:inline-block;
+    width:80px;
+    height:40px;
+    padding:0;
+    text-align: center;
+}
+.grade-submit {
+    cursor: pointer;
+    margin-left:20px;
+    display:inline-block;
+    background-color:#00669b;
+    height:40px;
+    color:white;
+    border:5px solid #00669b;
+}
+.slide-answer {
+    cursor: pointer;
+
+    display: inline-block;
+    width:60%;
+}
+.home-button {
+    position: absolute;
+    right:200px;
+    top:50px;
+    border:3px solid #4caf50;
+    background-color:#f5f5f5;
+    cursor:pointer;
+    z-index:20;
+    color:#4caf50;
+    font-weight:600;
+    border-radius:10px;
+    top:40px;
+    width:100px;
+    height:60px;
+    font-size:120%;
+}
+#a_deadline {
+    width:120px;
+    overflow:hidden;
+}
+#a_question{
+    margin:0 20px;
+    width:400px;
+    padding-left:20px;
+}
+#a_name {
+    padding-left:20px;
+}
+#a_submit{
+    border:2px solid white;
+    height:30px;
+    margin-left:20px;
+    color:white;
+    background-color:transparent; 
+}
+
+.sidebar{
+    position: absolute;
+    background-color:#F4F4F4;
+    height:100%;
+    width:15%;
+}
+.sidebar button{
+    width:100%;
+    height:10%;
+    font-size:18px;
+    padding:0;
+}
+#logout-button {    
+    background-color:#DE0000;
+    border:0;
+}
+#enroll-course {
+    border:0;
+    background-color:#4caf50;
+}
+.sidebar-bottom button{
+    cursor: pointer;
+    height:50%;
+    color:white;
+    
+}
+.sidebar-bottom {
+    height:20%;
+    width:100%;
+    position: absolute;
+    bottom:0;
+}
+.course {
+    color:#0061E0;
+    background:#F4F4F4;
+    border:0;
+    position: relative;
+    border-radius:0 20px 20px 0;
+    cursor: pointer;
+}
+.course-active {
+    background-color:#0061E0;
+    color:white;
+    border-radius:0;
+}
+.student-course-detail {
+    font-size:120%;
+    color:white;
+    position: relative;
+    width:85%;
+    height:100%;    
+    overflow: auto;
+    left:15%;
+    bottom:16px;
+}
+#student-course-name {
+    font-weight:400;
+    font-size:180%;
+    margin-bottom: 10px;
+    margin-left:8%;
+}
+.student-course-detail p {
+    margin-left:8%;
+    margin-top:0px;
+    color:#f5f5f5   
+}
+.student-course-detail table, tr {
+    width:100%;
+}
+.student-course-detail table {
+    margin-top:80px;
+}
+.student-course-detail th {
+    border-top:1px solid #f5f5f5;
+    border-bottom:1px solid #f5f5f5;
+}
+.student-course-detail th,td {
+    font-weight:400;
+    margin-top:40px;
+    padding:6px 0 6px 50px;
+    text-align: left;    
+}
+.student-assignment-name {
+    width:20%;
+}
+.student-assignment-deadline {
+    width:10%;
+}
+.student-assignment-answer {
+    width:25%;
+    padding-right:10px;
+    cursor: pointer;
+}
+.student-submit-answer {
+    width:400px;
+    height:400px;
+    left:120%;
+    background-color:#f1f1f1;
+    border:1px solid #494949;
+    border-radius:10px;
+
+    position: absolute;
+    top:0;
+}
+.student-submit-answer h1{
+    margin-left:10%;
+    margin-bottom:20px;
+    font-weight:400;
+}
+.student-submit-answer button {
+    margin-left:10%;
+    width:81%;
+    height:40px;
+    color:white;
+    background-color:#00669b;
+    font-weight:bold;
+    margin-top:13px;    
+    border:0;
+}
+#submit-answer {
+    cursor: pointer;
+    position: relative;
+    z-index:20;
+}
+.enroll-content {
+    margin-left:80px;
+}
+.enroll-title {
+    font-weight: normal;
+    font-size:36px;
+    margin-top:80px;
+}
+.enroll-subject-button {
+    position: relative;
+    text-align:center;
+    border:2px solid white;
+    width:60px;
+    padding:15px 30px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.enroll-animation {
+    position: absolute;
+    background-color:white;
+    color:#0061e0;
+    font-weight:bold;
+    width:60px;
+    padding:15px 30px;
+    top:0;
+    left:-120%;
+    margin:0 !important;
+    transition-duration: 0.5s;  
+}
+.enroll-subject-button:hover .enroll-animation {
+    left:0;
+}
+.enroll-subject {
+    margin-bottom:20px; 
+    position: relative;
+    width:90%;
+    border-bottom:2px solid white;
+}
+.enroll-subject p {
+    margin-top:20px;
+    font-weight: bold;
+    margin-left:0px;
+}
+.enroll-des {
+    position:absolute;
+    font-weight:normal !important;
+    top:-20px;
+    left:200px;
+}
+.preload-image {
+    background: url('assets/student.jpg') no-repeat -9999px -9999px;
+}
+.dev-note {
+    color:white;
+    position: absolute;
+    bottom:0px;
+    right:20px;
+    font-size:12px;
+}
+#submit-answer-close {
+    position: absolute;
+    top:10px;
+    right:40px;
+    cursor: pointer;
+}
